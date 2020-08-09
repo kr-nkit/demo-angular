@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+        <div class="card" *ngFor="let recipe of recipes">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between">
+                <img src="{{ recipe.image }}" alt="" width="100%">
+                <div class="card-content">
+
+
+                    <mat-card-title>{{ recipe.name }}</mat-card-title>
+                    <img src="./assets/img/heart-empty.png" alt="" class="heart-icon">
+                    <mat-card-subtitle>Price {{ recipe.price | currency: 'USD' : '$' }}</mat-card-subtitle>
+
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit magni nihil ipsum.
+                    </p>
+
+                    <div class="category">{{ recipe.category | titlecase}}</div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
